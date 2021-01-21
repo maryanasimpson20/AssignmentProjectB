@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private float _speed = 5f;
     // Start is called before the first frame update
+    public static int score = 0;
+    public Text scoreText;
+
     void Start()
     {
         sc = GetComponent<SphereCollider>();
@@ -22,9 +26,14 @@ public class Enemy : MonoBehaviour
         //if the enemy has gone below -7.39 on the y axis
         if(transform.position.z < -7.39f)
         {
+            score += 10;
+            scoreText.text = "" + score; 
             //transform.position = teleport
             float randomX = Random.Range(-4.15f,4.15f);
-            _speed+=1f;
+            _speed+=0.5f;
+            if(_speed >= 25f){
+                _speed = 25f;
+            }
             transform.position = new Vector3(randomX,0.6f,6.45f);
         }
         //change the position to teleport from the top of the screen at random position on x axis

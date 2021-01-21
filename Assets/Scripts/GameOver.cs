@@ -13,6 +13,7 @@ public class GameOver : MonoBehaviour
         if(isPlayAgain)
         {
             SceneManager.LoadScene("MainMenu");
+            Enemy.score = 0;  
         }
     }
     void Start()

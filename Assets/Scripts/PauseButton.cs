@@ -16,7 +16,7 @@ public class PauseButton : MonoBehaviour
             GameIsPaused = true;
             Time.timeScale = 0f;
         }
-        if(isResume); //sets timescale to 1 when pressed
+        if(isResume) //sets timescale to 1 when pressed
         {
             GameIsPaused = false;
             Time.timeScale = 1f;
