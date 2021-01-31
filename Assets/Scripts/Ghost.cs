@@ -16,7 +16,7 @@ public class Ghost : MonoBehaviour
     }
     //Update is called once per frame
     void Update() {
-      speed = 7f;
+      speed = 38f;
       if(Input.GetAxis("Horizontal")<0){
         //direction = Vector3.left;
         rb.AddForce (Vector3.left * speed);//changing the direction of Ghost to left
