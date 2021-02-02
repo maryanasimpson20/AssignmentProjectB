@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class Enemy : MonoBehaviour
 {
     public string x = " ";
-    private BoxCollider bx;
     private SphereCollider sc;
     [SerializeField]
     private float _speed = 5f;
@@ -17,7 +16,6 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         sc = GetComponent<SphereCollider>();
-        bx = GetComponent<BoxCollider>();
     }
 
     // Update is called once per frame
@@ -26,12 +24,12 @@ public class Enemy : MonoBehaviour
         //translate the enemy position backwards (back due to it being on the z axis)
         transform.Translate(Vector3.back * _speed * Time.deltaTime);
         //if the enemy has gone below -7.39 on the y axis
-        if(transform.position.z < -3.67f)
+        if(transform.position.z < -3.47f)
         {
             score += 10;
             scoreText.text = "" + score; 
             //transform.position = teleport
-            float randomX = Random.Range(-4.15f,4.15f);
+            float randomX = Random.Range(-4.9f,4.9f);
             _speed+=0.5f;
             if(_speed >= 25f){
                 _speed = 25f;
