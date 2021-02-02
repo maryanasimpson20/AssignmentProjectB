@@ -356,7 +356,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &421481911
 Transform:
   m_ObjectHideFlags: 0
@@ -380,7 +380,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 421481910}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
@@ -439,7 +439,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 421481910}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da8f8d4192a8e7b4c8ae72cb310b209b, type: 3}
   m_Name: 
@@ -568,6 +568,7 @@ GameObject:
   - component: {fileID: 515454496}
   - component: {fileID: 515454498}
   - component: {fileID: 515454497}
+  - component: {fileID: 515454499}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Ghost
@@ -721,13 +722,33 @@ Animation:
   m_GameObject: {fileID: 515454490}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 0}
+  m_Animation: {fileID: 7400000, guid: 6d84a4e9056c3f64d81c6f8ff0b1c5e7, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 1e3c5cc0091fcb44da04dd6c18421b16, type: 2}
+  - {fileID: 7400000, guid: 6d84a4e9056c3f64d81c6f8ff0b1c5e7, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 0
+  m_PlayAutomatically: 1
   m_AnimatePhysics: 1
   m_CullingType: 0
+--- !u!95 &515454499
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515454490}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a75f56c63e921c34bb65fd1bcf8f50a2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &608480869
 GameObject:
   m_ObjectHideFlags: 0
@@ -772,6 +793,7 @@ GameObject:
   - component: {fileID: 696613681}
   - component: {fileID: 696613680}
   - component: {fileID: 696613679}
+  - component: {fileID: 696613683}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -859,6 +881,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!95 &696613683
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696613678}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3bf5ab2b482fa3f47be6d0240801b6d1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,7 +1066,7 @@ GameObject:
   - component: {fileID: 875045465}
   - component: {fileID: 875045464}
   - component: {fileID: 875045470}
-  - component: {fileID: 875045471}
+  - component: {fileID: 875045466}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -1064,6 +1105,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 2
   m_CollisionDetection: 0
+--- !u!136 &875045466
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875045463}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.49999994
+  m_Height: 3.002649
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: -1.0013247}
 --- !u!23 &875045467
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1139,19 +1194,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.49999997
   m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &875045471
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 875045463}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.99999994, y: 0.99999994, z: 3.3093846}
-  m_Center: {x: 0, y: 0, z: -1.1546919}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
