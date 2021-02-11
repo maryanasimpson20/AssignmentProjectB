@@ -22,9 +22,9 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         //translate the enemy position backwards (back due to it being on the z axis)
-        transform.Translate(Vector3.back * _speed * Time.deltaTime);
+        transform.Translate(Vector3.down * _speed * Time.deltaTime);
         //if the enemy has gone below -7.39 on the y axis
-        if(transform.position.z < -3.47f)
+        if(transform.position.z < -4.64f)
         {
             score += 10;
             scoreText.text = "" + score; 
