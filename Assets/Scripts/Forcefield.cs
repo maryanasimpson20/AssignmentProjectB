@@ -15,6 +15,8 @@ public class Forcefield : MonoBehaviour
     {
         
     }
+
+    //We were working on it but not implemented
     //Forcefield around ghost "scares" (destroys) ghosthunter
     void OnTriggerEnter(Collider other) 
     {

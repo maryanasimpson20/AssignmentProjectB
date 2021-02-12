@@ -13,7 +13,7 @@ public class GameOverScore : MonoBehaviour
         
     }
 
-    // Update is called once per frame
+    // Update this score
     void Update()
     {
         scoreText.text = "Your Score: \n      " + Enemy.score;

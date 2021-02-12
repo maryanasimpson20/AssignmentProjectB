@@ -4,9 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Leaderboard: MonoBehaviour
 {
+//Creating a variable that signifies the button
     public bool isBack;
 
-    // Start is called before the first frame update
+    //This method is called when the button is clicked
     void OnMouseUp()
     {
         if(isBack)

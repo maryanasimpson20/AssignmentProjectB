@@ -5,12 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class OptionsMenu : MonoBehaviour
 {
+    //Declaring all the buttons as boolean to check which they are
     public bool isBack;
     public bool isVisuals;
     public bool isInstructions;
     public bool isAudio;
 
-    // Start is called before the first frame update
+    //This method is called when the button is clicked
     void OnMouseUp()
     {
         if(isBack)

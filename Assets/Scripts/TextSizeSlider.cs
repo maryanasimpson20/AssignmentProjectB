@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class TextSizeSlider : MonoBehaviour
 {
+    // text size (Not implemented)
     // public class slide : MonoBehaviour
     // {
         public Text text; 

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
 
     //Declaring all the buttons as boolean to check which they are
     public bool isPlay;
@@ -13,6 +13,7 @@ public class MainMenu : MonoBehaviour
     public bool isExit;
     public bool isLeaderboards;
 
+    //This method is called when the button is clicked
     void OnMouseUp()
     {
         if(isPlay)

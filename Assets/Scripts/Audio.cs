@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Audio : MonoBehaviour
 {
-    // Start is called before the first frame update
+    //Creating a variable that signifies the button
     public bool isBack;
 
+    //This method is called when the button is clicked
     void OnMouseUp()
     {
         if(isBack)
@@ -20,7 +21,7 @@ public class Audio : MonoBehaviour
         
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         

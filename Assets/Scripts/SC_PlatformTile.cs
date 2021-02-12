@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SC_PlatformTile : MonoBehaviour
 {
+    //We were working on an endless ground generator and obstacle generator (Not implemented)
     public Transform startPoint;
     public Transform endPoint;
     public GameObject[] obstacles; 

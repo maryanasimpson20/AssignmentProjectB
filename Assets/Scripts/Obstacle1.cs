@@ -12,7 +12,8 @@ public class enemy : MonoBehaviour
     {
         
     }
-
+    
+    //Was working on an endless ground generator and obstacle generator (Not implemented)
     // Update is called once per frame
     void Update()
     {

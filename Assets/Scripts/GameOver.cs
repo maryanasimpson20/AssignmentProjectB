@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-    // Start is called before the first frame update
+    //Creating a variable that signifies the button
     public bool isPlayAgain;
     public bool isMenu;
 
+    //This method is called when the button is clicked
     void OnMouseUp()
     {
         if(isPlayAgain)

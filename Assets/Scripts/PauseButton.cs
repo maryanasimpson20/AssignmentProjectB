@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PauseButton : MonoBehaviour
 {
-    // Start is called before the first frame update
+    //Creating variables for buttons and a variable that signifies the game status
     public static bool GameIsPaused = false;
     public bool isPause;
     public bool isResume;
@@ -14,12 +14,12 @@ public class PauseButton : MonoBehaviour
         if(isPause) //pause button sets timescale to 0 when pressed 
         {
             GameIsPaused = true;
-            Time.timeScale = 0f;
+            Time.timeScale = 0;
         }
-        if(isResume) //sets timescale to 1 when pressed
+        if(isResume && GameIsPaused == true)  //sets timescale to 1 when pressed
         {
             GameIsPaused = false;
-            Time.timeScale = 1f;
+            Time.timeScale = 1;
         }
     }
 

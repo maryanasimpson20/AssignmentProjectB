@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Visuals : MonoBehaviour
 {
-    // Start is called before the first frame update
+    //Start is called before the first frame update
     public bool isBack;
     public bool isFullscreen;
 

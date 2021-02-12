@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SC_GroundGenerator : MonoBehaviour
 {
+    //We were working on an endless ground generator and obstacle generator (Not implemented)
     public Camera mainCamera;
     public Transform startPoint; //Point from where ground tiles will start
     public SC_PlatformTile tilePrefab;
